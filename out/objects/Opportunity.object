@@ -12,10 +12,16 @@
         <unique>false</unique>
     </fields>
     <validationRules>
+        <fullName>Test_Validation3</fullName>
+        <active>true</active>
+        <errorConditionFormula>Amount > 1000</errorConditionFormula>
+        <errorMessage>Error Message</errorMessage>
+    </validationRules>
+    <validationRules>
         <fullName>Test_ValidationRule</fullName>
         <active>true</active>
-        <errorConditionFormula>CloseDate &lt; today()</errorConditionFormula>
-        <errorMessage>Close Date cannot be less that today date</errorMessage>
+        <errorConditionFormula>today()>  CloseDate</errorConditionFormula>
+        <errorMessage>error message change</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>Test_Vlidation2</fullName>

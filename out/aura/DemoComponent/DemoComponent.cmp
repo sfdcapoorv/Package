@@ -1,0 +1,55 @@
+<aura:component controller="ExpensesController"  implements="force:appHostable">
+    <aura:attribute name="expenses" type="contact[]"/>
+ 
+<aura:attribute name="newExpense" type="contact"
+     default="{ 'sobjectType': 'contact',
+                    'FirstName': '',
+                    'LastName': '',
+                    }"/>
+
+          <p class="slds-text-heading--label">Expenses</p>
+   
+    <!-- / PAGE HEADER -->
+
+
+  <!-- BOXED AREA -->
+  <fieldset class="slds-box slds-theme--default slds-container--small">
+
+    <!-- CREATE NEW EXPENSE FORM -->
+    <form class="slds-form--stacked">
+
+              <ui:inputText aura:id="Fname" label="First Name"
+                  class="slds-input"
+                  labelClass="slds-form-element__label"
+                  value="{!v.newExpense.FirstName}"
+                  required="true"/>
+        
+          <ui:inputText aura:id="LName" label="Last Name"
+                  class="slds-input"
+                  labelClass="slds-form-element__label"
+                  value="{!v.newExpense.LastName}"
+                  required="true"/>
+         
+       <!--       <ui:inputNumber aura:id="amount" label="Amount"
+                  class="slds-input"
+                  labelClass="slds-form-element__label"
+                  value="{!v.newExpense.Amount__c}"
+                  />
+-->
+        
+
+      
+          <ui:button label="Create Expense"
+              class="slds-button slds-button--brand"
+              press="{!c.clickCreateExpense}"/>
+     
+
+    </form>
+    <!-- / CREATE NEW EXPENSE FORM -->
+
+  </fieldset>
+  <!-- / BOXED AREA -->
+
+
+
+</aura:component>
